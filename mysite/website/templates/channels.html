@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>MOST WATCHED CHANNELS ON TWITCH</h1>
+
+<table data-url="data1.json" data-height="299" data-sort-name="name" data-sort-order="desc">
+    <thead>
+        <tr>
+            <th data-field="id" data-align="right" data-sortable="true">Channel Name</th>
+            <th data-field="name" data-align="center" data-sortable="true">Viewers</th>
+            <th data-field="price" data-sortable="true">Link</th>
+        </tr>
+    </thead>
+</table>
+
+
+<table>
+<tr>
+    <td></td>
+    {% for product in products %}
+    <th>{{ product.title }}</th>
+    {% endfor %}
+</tr>
+<tr>
+    <th>Feature 1</th>
+    {% for product in products %}
+    <td>{{ product.feature1 }}</td>
+    {% endfor %}
+</tr>
+<tr>
+    <th>Feature 2</th>
+    {% for product in products %}
+    <td>{{ product.feature2 }}</td>
+    {% endfor %}
+</tr>
+</table>
+
+{% endblock %}
